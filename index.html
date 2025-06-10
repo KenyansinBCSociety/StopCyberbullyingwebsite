@@ -16,6 +16,69 @@
             line-height: 1.6;
             color: #333;
         }
+        <!-- Google Translate Script -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'sw,en,fr,so,ar', // Swahili, English, French, Somali, Arabic
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false,
+        multilanguagePage: true
+    }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <style>
+/* Language selector styling */
+.language-selector {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.language-selector h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.language-info {
+    background: #e3f2fd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1565c0;
+}
+
+/* Hide Google Translate banner */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+/* Style the Google Translate dropdown */
+#google_translate_element select {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#google_translate_element select:hover {
+    background: #45a049;
+}
+</style>
 
         /* Navigation */
         .navbar {
@@ -698,6 +761,20 @@
     </style>
 </head>
 <body>
+    <body>
+    <!-- Place language selector immediately after <body> tag -->
+    <div class="language-selector">
+        <h3>🌍 Choose Your Language / Chagua Lugha Yako</h3>
+        <div id="google_translate_element"></div>
+        <div class="language-info">
+            <strong>Available Languages:</strong> English, Kiswahili, Français, Soomaali, العربية<br>
+            <em>Select your preferred language from the dropdown above</em>
+        </div>
+    </div>
+    
+    <!-- Your existing content starts here -->
+    <h1>🛡️ Stop Cyberbullying Canada</h1>
+    <!-- rest of your content -->
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
