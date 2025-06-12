@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Cyberbullying Canada - Awareness & Support</title>
+    
     <style>
         * {
             margin: 0;
@@ -16,69 +17,6 @@
             line-height: 1.6;
             color: #333;
         }
-        <!-- Google Translate Script -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'sw,en,fr,so,ar', // Swahili, English, French, Somali, Arabic
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-        autoDisplay: false,
-        multilanguagePage: true
-    }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <style>
-/* Language selector styling */
-.language-selector {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.language-selector h3 {
-    margin: 0 0 10px 0;
-    color: #333;
-    font-size: 18px;
-}
-
-.language-info {
-    background: #e3f2fd;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #1565c0;
-}
-
-/* Hide Google Translate banner */
-.goog-te-banner-frame.skiptranslate {
-    display: none !important;
-}
-
-body {
-    top: 0px !important;
-}
-
-/* Style the Google Translate dropdown */
-#google_translate_element select {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-#google_translate_element select:hover {
-    background: #45a049;
-}
-</style>
 
         /* Navigation */
         .navbar {
@@ -139,9 +77,23 @@ body {
             cursor: pointer;
         }
 
+        /* Language Selector */
+        .language-selector {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+            position: fixed;
+            top: 80px;
+            width: 100%;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
         /* Main Content */
         .main-content {
             margin-top: 80px;
+            min-height: calc(100vh - 80px);
         }
 
         .container {
@@ -150,17 +102,23 @@ body {
             padding: 0 2rem;
         }
 
-        /* Page Sections */
+        /* Pages */
         .page {
             display: none;
+            padding: 3rem 0;
+            background: #f8f9fa;
             min-height: calc(100vh - 80px);
         }
 
         .page.active {
-            display: block;
+            display: block !important;
         }
 
-        /* Home Page Styles */
+        .page#home {
+            background: white;
+        }
+
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -208,85 +166,7 @@ body {
             transform: translateY(-2px);
         }
 
-        /* Stats Section */
-        .stats {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        /* Features */
-        .features {
-            padding: 4rem 0;
-            background: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card.parents {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .feature-card.teens {
-            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
-            color: white;
-        }
-
-        .feature-card.resources {
-            background: linear-gradient(135deg, #ffa502 0%, #ff6348 100%);
-            color: white;
-        }
-
-        /* Other Pages Styles */
-        .page-content {
-            padding: 3rem 0;
-            background: #f8f9fa;
-            min-height: calc(100vh - 80px);
-        }
-
+        /* Content styling */
         .content-header {
             text-align: center;
             margin-bottom: 3rem;
@@ -368,339 +248,85 @@ body {
             color: white;
         }
 
-        /* Teen specific styles */
-        .teen-section {
-            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem 0;
-        }
-
-        .teen-section h2, .teen-section h3, .teen-section p {
-            color: white;
-        }
-
-        .action-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .action-card {
-            background: rgba(255,255,255,0.9);
-            color: #333;
-            padding: 1.5rem;
-            border-radius: 10px;
-        }
-
-        .action-card h4 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        /* Card Game Styles */
-        .card-game-container {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 2rem;
-            color: white;
-            margin: 2rem 0;
-        }
-
-        .game-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .deck-stats {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .category-filters {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            border: 2px solid rgba(255,255,255,0.3);
-            background: transparent;
-            color: white;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: rgba(255,255,255,0.2);
-            border-color: white;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .card-display-area {
-            min-height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .game-card {
-            background: white;
-            color: #333;
-            border-radius: 15px;
-            padding: 2rem;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            transform: scale(1);
-            transition: all 0.5s ease;
-            position: relative;
-        }
-
-        .game-card.hidden {
-            opacity: 0;
-            transform: scale(0.8) translateY(20px);
-        }
-
-        .game-card.showing {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
+        /* Card category clickable styles */
         .card-category {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-
-        .card-category.scenario { background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%); }
-        .card-category.response { background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
-        .card-category.question { background: linear-gradient(135deg, #ffa502 0%, #ff6348 100%); }
-        .card-category.fact { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
-
-        .card-number {
-            color: #667eea;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .card-main-text {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 2rem;
-            line-height: 1.4;
-            text-align: center;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-
-        .card-questions {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .card-question {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 10px;
-            border-left: 4px solid;
-        }
-
-        .child-asks {
-            border-left-color: #ff6b6b;
-        }
-
-        .parent-asks {
-            border-left-color: #4ecdc4;
-        }
-
-        .card-question strong {
-            color: #333;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .deck-placeholder {
-            text-align: center;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .deck-visual {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-
-        .deck-card {
-            width: 80px;
-            height: 120px;
-            background: white;
-            border-radius: 10px;
-            position: absolute;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-        }
-
-        .deck-card-1 {
-            transform: rotate(-5deg);
-            z-index: 1;
-        }
-
-        .deck-card-2 {
-            transform: rotate(0deg);
-            z-index: 2;
-            left: 5px;
-        }
-
-        .deck-card-3 {
-            transform: rotate(5deg);
-            z-index: 3;
-            left: 10px;
-        }
-
-        .deck-card-1::after { content: "🎴"; }
-        .deck-card-2::after { content: "💬"; }
-        .deck-card-3::after { content: "🤝"; }
-
-        .game-history {
-            margin-top: 2rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
             padding: 1.5rem;
-        }
-
-        .game-history h3 {
-            color: white;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .card-history-list {
-            max-height: 200px;
-            overflow-y: auto;
-        }
-
-        .history-item {
-            background: rgba(255,255,255,0.9);
-            color: #333;
-            padding: 1rem;
-            margin: 0.5rem 0;
             border-radius: 10px;
-            font-size: 0.9rem;
-        }
-
-        .history-category {
-            background: #667eea;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-        }
-
-        .no-history {
             text-align: center;
-            color: rgba(255,255,255,0.7);
-            font-style: italic;
-        }
-
-        /* Floating Salama Chat Button - FIXED */
-        .floating-chat-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.4);
-            transition: all 0.3s ease;
-            z-index: 1001;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border: none;
             cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            user-select: none;
         }
 
-        .floating-chat-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(155, 89, 182, 0.6);
+        .card-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .card-category.scenario {
+            background: #e3f2fd;
+        }
+        .card-category.scenario:hover {
+            border: 2px solid #1976d2;
+            box-shadow: 0 10px 25px rgba(25, 118, 210, 0.3);
+        }
+
+        .card-category.feeling {
+            background: #f3e5f5;
+        }
+        .card-category.feeling:hover {
+            border: 2px solid #7b1fa2;
+            box-shadow: 0 10px 25px rgba(123, 31, 162, 0.3);
+        }
+
+        .card-category.safety {
+            background: #e8f5e8;
+        }
+        .card-category.safety:hover {
+            border: 2px solid #388e3c;
+            box-shadow: 0 10px 25px rgba(56, 142, 60, 0.3);
+        }
+
+        .card-category.family {
+            background: #fff3e0;
+        }
+        .card-category.family:hover {
+            border: 2px solid #f57c00;
+            box-shadow: 0 10px 25px rgba(245, 124, 0, 0.3);
+        }
+
+        .card-category h4 {
+            margin-bottom: 1rem;
+        }
+
+        .card-category p {
+            margin-bottom: 1rem;
+        }
+
+        .card-category .draw-button {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
             color: white;
-            text-decoration: none;
+            display: inline-block;
         }
 
-        .floating-chat-btn::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 25px;
-            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
-            animation: pulse-glow 3s infinite;
-            z-index: -1;
-            opacity: 0.7;
+        .card-category.scenario .draw-button {
+            background: #1976d2;
         }
 
-        @keyframes pulse-glow {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.7;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.9;
-            }
+        .card-category.feeling .draw-button {
+            background: #7b1fa2;
         }
 
-        .chat-icon {
-            font-size: 1.2rem;
+        .card-category.safety .draw-button {
+            background: #388e3c;
         }
 
-        .chat-text {
-            font-size: 0.95rem;
-            white-space: nowrap;
+        .card-category.family .draw-button {
+            background: #f57c00;
         }
 
         /* Footer */
@@ -710,6 +336,115 @@ body {
             text-align: center;
             padding: 3rem 0;
             margin-top: 4rem;
+        }
+
+        /* Chatbot */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .chatbot-toggle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            width: 140px;
+            height: 60px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .chatbot-toggle:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 85px;
+            right: 0;
+            width: 350px;
+            height: 450px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 2px solid #667eea;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .chatbot-message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 80%;
+        }
+
+        .chatbot-message.bot {
+            background: #e3f2fd;
+            margin-right: 20%;
+        }
+
+        .chatbot-message.user {
+            background: #667eea;
+            color: white;
+            margin-left: 20%;
+            text-align: right;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            margin-left: 10px;
+            cursor: pointer;
         }
 
         /* Mobile responsive */
@@ -746,58 +481,24 @@ body {
             .container {
                 padding: 0 1rem;
             }
-
-            .floating-chat-btn {
-                bottom: 20px;
-                right: 20px;
-                padding: 12px 16px;
-                font-size: 0.9rem;
-            }
-            
-            .chat-text {
-                font-size: 0.85rem;
-            }
         }
     </style>
 </head>
 <body>
-    <body>
-    <!-- Place language selector immediately after <body> tag -->
-    <div class="language-selector">
-        <h3>🌍 Choose Your Language / Chagua Lugha Yako</h3>
-        <div id="google_translate_element"></div>
-        <div class="language-info">
-            <strong>Available Languages:</strong> English, Kiswahili, Français, Soomaali, العربية<br>
-            <em>Select your preferred language from the dropdown above</em>
-        </div>
-    </div>
-    
-    <!-- Your existing content starts here -->
-    <h1>🛡️ Stop Cyberbullying Canada</h1>
-    <!-- rest of your content -->
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo" onclick="showPage('home')">🛡️ Stop Cyberbullying Canada</a>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <a href="javascript:void(0)" class="logo" onclick="showPage('home'); return false;">🛡️ Stop Cyberbullying Canada</a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu(); return false;">☰</button>
             <ul class="nav-menu" id="navMenu">
-                <li><a onclick="showPage('home')">Home</a></li>
-                <li><a onclick="showPage('parents')">For Parents</a></li>
-                <li><a onclick="showPage('teens')">For Teens</a></li>
-                <li><a onclick="showPage('cards')">Conversation Cards</a></li>
-                <li><a onclick="showPage('resources')">Resources</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('home'); return false;">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('parents'); return false;">For Parents</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('teens'); return false;">For Teens</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('cards'); return false;">Conversation Cards</a></li>
+                <li><a href="javascript:void(0)" onclick="showPage('resources'); return false;">Resources</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Floating Salama Chat Button - Visible on ALL Pages -->
-    <a href="https://chatgpt.com/g/g-683092be9da481919affff75e6f848d5-salama-cyberbullying-resources-support-companion" 
-       target="_blank" 
-       class="floating-chat-btn"
-       title="Get instant support from Salama - AI Cyberbullying Support Companion">
-        <span class="chat-icon">💬</span>
-        <span class="chat-text">Chat with Salama</span>
-    </a>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -809,26 +510,26 @@ body {
                     <h1>Together Against Cyberbullying</h1>
                     <p>Empowering Canadian families with knowledge, tools, and support to create safer digital spaces for everyone.</p>
                     <div>
-                        <button class="btn btn-primary" onclick="showPage('parents')">For Parents</button>
-                        <button class="btn btn-secondary" onclick="showPage('teens')">For Teens</button>
+                        <button class="btn btn-primary" onclick="showPage('parents'); return false;">For Parents</button>
+                        <button class="btn btn-secondary" onclick="showPage('teens'); return false;">For Teens</button>
                     </div>
                 </div>
             </div>
 
             <!-- Stats Section -->
-            <div class="stats">
+            <div style="padding: 4rem 0; background: #f8f9fa;">
                 <div class="container">
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">1 in 3</div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                        <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div style="font-size: 3rem; font-weight: bold; color: #667eea; margin-bottom: 1rem;">1 in 3</div>
                             <p>Canadian teens experience cyberbullying</p>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">24/7</div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div style="font-size: 3rem; font-weight: bold; color: #667eea; margin-bottom: 1rem;">24/7</div>
                             <p>Cyberbullying follows victims home</p>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-number">100%</div>
+                        <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <div style="font-size: 3rem; font-weight: bold; color: #667eea; margin-bottom: 1rem;">100%</div>
                             <p>Preventable with the right knowledge</p>
                         </div>
                     </div>
@@ -836,662 +537,849 @@ body {
             </div>
 
             <!-- Features Section -->
-            <div class="features">
+            <div style="padding: 4rem 0;">
                 <div class="container">
                     <div style="text-align: center; margin-bottom: 3rem;">
                         <h2>Choose Your Path to Safety</h2>
                         <p>Tailored resources for parents, teens, and support networks</p>
                     </div>
-                    <div class="features-grid">
-                        <div class="feature-card parents" onclick="showPage('parents')">
-                            <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
+                        <div onclick="showPage('parents')" style="text-align: center; padding: 2rem; border-radius: 15px; transition: transform 0.3s; cursor: pointer; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">👨‍👩‍👧‍👦</div>
                             <h3>For Parents & Guardians</h3>
                             <p>Learn to recognize warning signs, respond effectively, and support your teen through cyberbullying challenges.</p>
                         </div>
-                        <div class="feature-card teens" onclick="showPage('teens')">
-                            <div class="feature-icon">🧑‍🤝‍🧑</div>
+                        <div onclick="showPage('teens')" style="text-align: center; padding: 2rem; border-radius: 15px; transition: transform 0.3s; cursor: pointer; background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%); color: white;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🧑‍🤝‍🧑</div>
                             <h3>For Teenagers</h3>
                             <p>Practical tools, immediate action steps, and support resources to handle cyberbullying and stay safe online.</p>
                         </div>
-                        <div class="feature-card resources" onclick="showPage('resources')">
-                            <div class="feature-icon">📞</div>
+                        <div onclick="showPage('resources')" style="text-align: center; padding: 2rem; border-radius: 15px; transition: transform 0.3s; cursor: pointer; background: linear-gradient(135deg, #ffa502 0%, #ff6348 100%); color: white;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">📞</div>
                             <h3>Emergency Resources</h3>
                             <p>24/7 helplines, crisis support, and professional resources available immediately when you need help.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Footer for Home Page -->
+            <footer class="footer">
+                <div class="container">
+                    <p><strong>Developed by the Kenyan Community in British Columbia</strong></p>
+                    <p>With funding from the Government of Canada</p>
+                    <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                        This website provides general information and should not replace professional advice. 
+                        In emergencies, always call 911.
+                    </p>
+                </div>
+            </footer>
         </div>
 
         <!-- Parents Page -->
         <div id="parents" class="page">
-            <div class="page-content">
-                <div class="container">
-                    <div class="content-header">
-                        <h1>🛡️ Cyberbullying Guide for Parents</h1>
-                        <p>Everything you need to know to protect and support your teenager</p>
+            <div class="container">
+                <div class="content-header">
+                    <h1>🛡️ Cyberbullying Guide for Parents</h1>
+                    <p>Everything you need to know to protect and support your teenager</p>
+                </div>
+
+                <div class="section">
+                    <h2>Understanding Cyberbullying</h2>
+                    <p>Cyberbullying is the use of digital technologies to repeatedly and intentionally harm others. Unlike traditional bullying, cyberbullying:</p>
+                    <ul>
+                        <li>Happens 24/7, not just during school hours</li>
+                        <li>Can reach unlimited audiences instantly</li>
+                        <li>Creates permanent digital evidence</li>
+                        <li>Allows for anonymous harassment</li>
+                        <li>Follows victims into their homes</li>
+                    </ul>
+                    
+                    <h3>Common Forms of Cyberbullying</h3>
+                    <ul>
+                        <li><strong>Harassment:</strong> Sending cruel, vicious, or threatening messages</li>
+                        <li><strong>Denigration:</strong> Spreading rumors or sharing information to damage someone's reputation</li>
+                        <li><strong>Flaming:</strong> Online fighting using angry and vulgar language</li>
+                        <li><strong>Impersonation:</strong> Creating fake accounts to damage someone's reputation</li>
+                        <li><strong>Outing and trickery:</strong> Sharing someone's private information or embarrassing content</li>
+                        <li><strong>Exclusion:</strong> Deliberately excluding someone from online groups</li>
+                        <li><strong>Cyberstalking:</strong> Repeated harassment that includes threats of physical harm</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>👁️ Recognizing the Warning Signs</h2>
+                    <p>Many teenagers don't immediately tell their parents about cyberbullying. Watch for these warning signs:</p>
+
+                    <h3>Digital Behavior Changes</h3>
+                    <ul>
+                        <li>Suddenly avoiding or appearing upset when using devices</li>
+                        <li>Hiding screens when you enter the room</li>
+                        <li>Deleting social media accounts or apps</li>
+                        <li>Receiving calls or messages that cause distress</li>
+                        <li>Being secretive about online activities</li>
+                    </ul>
+
+                    <h3>Emotional and Social Changes</h3>
+                    <ul>
+                        <li>Increased anxiety, depression, or irritability</li>
+                        <li>Withdrawal from family and friends</li>
+                        <li>Loss of interest in activities they previously enjoyed</li>
+                        <li>Changes in sleep patterns or appetite</li>
+                        <li>Unexplained mood swings</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4>Trust Your Instincts</h4>
+                        <p>If you notice several of these signs, especially in combination, trust your parental instincts and start a gentle conversation with your teenager.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🤝 How to Respond When Your Teen Opens Up</h2>
+                    <p>Your initial response when your teenager tells you about cyberbullying will determine whether they continue to trust you with difficult situations.</p>
+
+                    <h3>What TO Do</h3>
+                    <div class="success-box">
+                        <ul>
+                            <li><strong>Listen actively</strong> without interrupting or immediately offering solutions</li>
+                            <li><strong>Thank them</strong> for trusting you with this information</li>
+                            <li><strong>Validate their feelings</strong> and acknowledge their courage in telling you</li>
+                            <li><strong>Ask questions</strong> to understand the full scope of the situation</li>
+                            <li><strong>Work together</strong> to document evidence and plan next steps</li>
+                            <li><strong>Follow up regularly</strong> to check on their wellbeing</li>
+                        </ul>
                     </div>
 
-                    <div class="section">
-                        <h2>Understanding Cyberbullying</h2>
-                        <p>Cyberbullying is the use of digital technologies to repeatedly and intentionally harm others. Unlike traditional bullying, cyberbullying:</p>
+                    <h3>What NOT to Do</h3>
+                    <div class="warning-box">
                         <ul>
-                            <li>Happens 24/7, not just during school hours</li>
-                            <li>Can reach unlimited audiences instantly</li>
-                            <li>Creates permanent digital evidence</li>
-                            <li>Allows for anonymous harassment</li>
-                            <li>Follows victims into their homes</li>
-                        </ul>
-                        
-                        <h3>Common Forms of Cyberbullying</h3>
-                        <ul>
-                            <li><strong>Harassment:</strong> Sending cruel, vicious, or threatening messages</li>
-                            <li><strong>Denigration:</strong> Spreading rumors or sharing information to damage someone's reputation</li>
-                            <li><strong>Flaming:</strong> Online fighting using angry and vulgar language</li>
-                            <li><strong>Impersonation:</strong> Creating fake accounts to damage someone's reputation</li>
-                            <li><strong>Outing and trickery:</strong> Sharing someone's private information or embarrassing content</li>
-                            <li><strong>Exclusion:</strong> Deliberately excluding someone from online groups</li>
-                            <li><strong>Cyberstalking:</strong> Repeated harassment that includes threats of physical harm</li>
+                            <li><strong>Don't take away their devices</strong> as a punishment or "solution"</li>
+                            <li><strong>Don't minimize the situation</strong> by saying "just ignore it" or "kids will be kids"</li>
+                            <li><strong>Don't contact the bully or their parents directly</strong> without involving school authorities</li>
+                            <li><strong>Don't share their story</strong> with others without their permission</li>
+                            <li><strong>Don't blame them</strong> for what happened or question their actions</li>
                         </ul>
                     </div>
 
-                    <div class="section">
-                        <h2>👁️ Recognizing the Warning Signs</h2>
-                        <p>Many teenagers don't immediately tell their parents about cyberbullying. Watch for these warning signs:</p>
-
-                        <h3>Digital Behavior Changes</h3>
+                    <h3>Documenting Evidence Together</h3>
+                    <div class="info-box">
+                        <h4>Evidence Collection Checklist:</h4>
                         <ul>
-                            <li>Suddenly avoiding or appearing upset when using devices</li>
-                            <li>Hiding screens when you enter the room</li>
-                            <li>Deleting social media accounts or apps</li>
-                            <li>Receiving calls or messages that cause distress</li>
-                            <li>Being secretive about online activities</li>
+                            <li>Screenshot all harmful messages, posts, or comments</li>
+                            <li>Save URLs and usernames of perpetrators</li>
+                            <li>Document dates, times, and platforms used</li>
+                            <li>Keep a written log of incidents and their impact</li>
+                            <li>Save any relevant emails or other digital communications</li>
                         </ul>
+                    </div>
+                </div>
 
-                        <h3>Emotional and Social Changes</h3>
+                <div class="section">
+                    <h2>🛡️ Prevention and Protection Strategies</h2>
+                    
+                    <h3>Privacy Settings Checklist</h3>
+                    <div class="info-box">
                         <ul>
-                            <li>Increased anxiety, depression, or irritability</li>
-                            <li>Withdrawal from family and friends</li>
-                            <li>Loss of interest in activities they previously enjoyed</li>
-                            <li>Changes in sleep patterns or appetite</li>
-                            <li>Unexplained mood swings</li>
+                            <li>Set social media profiles to private</li>
+                            <li>Turn off location sharing</li>
+                            <li>Limit who can send friend requests or follow</li>
+                            <li>Restrict who can see posts and personal information</li>
+                            <li>Enable two-factor authentication</li>
+                            <li>Review and clean up friend/follower lists regularly</li>
                         </ul>
-
-                        <div class="warning-box">
-                            <h4>Trust Your Instincts</h4>
-                            <p>If you notice several of these signs, especially in combination, trust your parental instincts and start a gentle conversation with your teenager.</p>
-                        </div>
                     </div>
 
-                    <div class="section">
-                        <h2>🤝 How to Respond When Your Teen Opens Up</h2>
-                        <p>Your initial response when your teenager tells you about cyberbullying will determine whether they continue to trust you with difficult situations.</p>
+                    <h3>Building Digital Resilience</h3>
+                    <p>Help your teenager develop these essential skills:</p>
+                    <ul>
+                        <li><strong>Critical thinking:</strong> Question the accuracy and intent of online content</li>
+                        <li><strong>Empathy:</strong> Consider how their words might affect others</li>
+                        <li><strong>Communication skills:</strong> Express themselves clearly and respectfully</li>
+                        <li><strong>Self-regulation:</strong> Manage emotions before responding online</li>
+                        <li><strong>Digital citizenship:</strong> Understand rights and responsibilities online</li>
+                    </ul>
+                </div>
 
-                        <h3>What TO Do</h3>
-                        <div class="success-box">
-                            <ul>
-                                <li><strong>Listen actively</strong> without interrupting or immediately offering solutions</li>
-                                <li><strong>Thank them</strong> for trusting you with this information</li>
-                                <li><strong>Validate their feelings</strong> and acknowledge their courage in telling you</li>
-                                <li><strong>Ask questions</strong> to understand the full scope of the situation</li>
-                                <li><strong>Work together</strong> to document evidence and plan next steps</li>
-                                <li><strong>Follow up regularly</strong> to check on their wellbeing</li>
-                            </ul>
-                        </div>
+                <div class="section">
+                    <h2>📞 When to Seek Professional Help</h2>
+                    <div class="info-box">
+                        <h4>Consider professional mental health support if your teenager shows:</h4>
+                        <ul>
+                            <li>Persistent depression or anxiety</li>
+                            <li>Significant changes in behavior or personality</li>
+                            <li>Declining academic performance</li>
+                            <li>Social withdrawal or isolation</li>
+                            <li>Sleep or appetite disturbances</li>
+                            <li>Expressions of hopelessness or self-harm</li>
+                        </ul>
+                    </div>
 
-                        <h3>What NOT to Do</h3>
-                        <div class="warning-box">
-                            <ul>
-                                <li><strong>Don't take away their devices</strong> as a punishment or "solution"</li>
-                                <li><strong>Don't minimize the situation</strong> by saying "just ignore it" or "kids will be kids"</li>
-                                <li><strong>Don't contact the bully or their parents directly</strong> without involving school authorities</li>
-                                <li><strong>Don't share their story</strong> with others without their permission</li>
-                                <li><strong>Don't blame them</strong> for what happened or question their actions</li>
-                            </ul>
-                        </div>
-
-                        <div class="emergency-box">
-                            <h3>🚨 Emergency Contacts</h3>
-                            <p><strong>If your teenager is in immediate danger:</strong></p>
-                            <ul>
-                                <li><strong>Emergency:</strong> Call 911</li>
-                                <li><strong>Kids Help Phone:</strong> 1-800-668-6868</li>
-                                <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
-                                <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566</li>
-                            </ul>
-                        </div>
+                    <div class="emergency-box">
+                        <h3>🚨 Emergency Contacts</h3>
+                        <p><strong>If your teenager is in immediate danger:</strong></p>
+                        <ul>
+                            <li><strong>Emergency:</strong> Call 911</li>
+                            <li><strong>Kids Help Phone:</strong> 1-800-668-6868</li>
+                            <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
+                            <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            
+            <!-- Footer for Parents Page -->
+            <footer class="footer">
+                <div class="container">
+                    <p><strong>Developed by the Kenyan Community in British Columbia</strong></p>
+                    <p>With funding from the Government of Canada</p>
+                </div>
+            </footer>
         </div>
 
         <!-- Teens Page -->
         <div id="teens" class="page">
-            <div class="page-content">
-                <div class="container">
-                    <div class="content-header">
-                        <h1>🌟 Cyberbullying Survival Guide for Teens</h1>
-                        <p>You're not alone in this - here's how to take control and stay strong</p>
+            <div class="container">
+                <div class="content-header">
+                    <h1>🌟 Cyberbullying Survival Guide for Teens</h1>
+                    <p>You're not alone in this - here's how to take control and stay strong</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%); color: white; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                    <h2 style="color: white;">🤝 You're Not Alone in This</h2>
+                    <p style="color: white;">If you're dealing with cyberbullying, know that it's NOT your fault, and there are people who want to help. This guide gives you the tools, resources, and strategies you need to handle cyberbullying like a boss.</p>
+                    <div class="info-box" style="background: rgba(255,255,255,0.9); color: #333;">
+                        <p><strong>Fact:</strong> 1 in 3 Canadian teens experience cyberbullying. You're definitely not alone in this.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🎭 What Even IS Cyberbullying?</h2>
+                    <div class="info-box">
+                        <h4>The Real Definition:</h4>
+                        <p>Cyberbullying is when someone repeatedly uses technology (social media, texts, gaming platforms, etc.) to hurt, threaten, embarrass, or target someone else. It's basically being a jerk online, but with serious consequences.</p>
                     </div>
 
-                    <div class="teen-section">
-                        <h2>🤝 You're Not Alone in This</h2>
-                        <p>If you're dealing with cyberbullying, know that it's NOT your fault, and there are people who want to help. This guide gives you the tools, resources, and strategies you need to handle cyberbullying like a boss.</p>
-                        <div class="info-box" style="background: rgba(255,255,255,0.9); color: #333;">
-                            <p style="color: #000;"><strong>Fact:</strong> 1 in 3 Canadian teens experience cyberbullying. You're definitely not alone in this.</p>
+                    <h3>🤔 Why Does This Happen?</h3>
+                    <p>Some people cyberbully because:</p>
+                    <ul>
+                        <li>They feel powerful hiding behind a screen</li>
+                        <li>They're dealing with their own problems and taking it out on others</li>
+                        <li>They think there won't be consequences online</li>
+                        <li>They're trying to fit in with a certain group</li>
+                        <li>They're copying behavior they've seen elsewhere</li>
+                    </ul>
+
+                    <h3>📱 Different Types of Online Drama</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">Harassment</h4>
+                            <p>Sending mean messages, comments, or threats repeatedly</p>
                         </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>🚨 What to Do RIGHT NOW</h2>
-                        <div class="action-grid">
-                            <div class="action-card">
-                                <h4>🛑 Stop & Breathe</h4>
-                                <ul>
-                                    <li>Don't respond when you're angry or upset</li>
-                                    <li>Take a break from your phone/computer</li>
-                                    <li>Talk to someone you trust</li>
-                                    <li>Remember: this isn't your fault</li>
-                                </ul>
-                            </div>
-
-                            <div class="action-card">
-                                <h4>📸 Document Everything</h4>
-                                <ul>
-                                    <li>Screenshot all mean messages/posts</li>
-                                    <li>Save URLs and usernames</li>
-                                    <li>Write down dates and times</li>
-                                    <li>Don't delete anything yet</li>
-                                </ul>
-                            </div>
-
-                            <div class="action-card">
-                                <h4>📢 Report It</h4>
-                                <ul>
-                                    <li>Use the platform's reporting tools</li>
-                                    <li>Tell a trusted adult (parent, teacher, counselor)</li>
-                                    <li>Contact school if it involves classmates</li>
-                                    <li>Call police if there are threats of violence</li>
-                                </ul>
-                            </div>
-
-                            <div class="action-card">
-                                <h4>🤗 Get Support</h4>
-                                <ul>
-                                    <li>Talk to friends and family</li>
-                                    <li>Reach out to a counselor</li>
-                                    <li>Call a helpline (numbers below)</li>
-                                    <li>Join a support group</li>
-                                </ul>
-                            </div>
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">Exclusion</h4>
+                            <p>Purposely leaving someone out of group chats, games, or online activities</p>
                         </div>
-
-                        <div class="emergency-box">
-                            <h3>🆘 Need Help Right Now?</h3>
-                            <ul>
-                                <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
-                                <li><strong>Kids Help Phone:</strong> 1-800-668-6868</li>
-                                <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566</li>
-                                <li><strong>Emergency:</strong> Call 911</li>
-                            </ul>
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">Doxing</h4>
+                            <p>Sharing someone's private info (address, phone number) without permission</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">Impersonation</h4>
+                            <p>Pretending to be someone else online to damage their reputation</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="section">
+                    <h2>⚠️ Warning Signs to Watch For</h2>
+                    <div class="warning-box">
+                        <h4>You Might Be Getting Cyberbullied If:</h4>
+                        <ul>
+                            <li>You're getting mean messages, comments, or emails</li>
+                            <li>People are spreading rumors about you online</li>
+                            <li>Your photos are being shared without permission</li>
+                            <li>You're being excluded from group chats or online games</li>
+                            <li>Someone is pretending to be you online</li>
+                            <li>You're feeling anxious every time you check your phone</li>
+                            <li>You're avoiding social media or certain apps</li>
+                        </ul>
+                    </div>
+
+                    <h3>✨ It's NOT Your Fault</h3>
+                    <div class="success-box">
+                        <p><strong>Listen up:</strong> Whatever happened, whatever they're saying about you, whatever you posted or didn't post - cyberbullying is NEVER your fault. The person choosing to be cruel is 100% responsible for their actions, not you.</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🚨 What to Do RIGHT NOW</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">🛑 Stop & Breathe</h4>
+                            <ul>
+                                <li>Don't respond when you're angry or upset</li>
+                                <li>Take a break from your phone/computer</li>
+                                <li>Talk to someone you trust</li>
+                                <li>Remember: this isn't your fault</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">📸 Document Everything</h4>
+                            <ul>
+                                <li>Screenshot all mean messages/posts</li>
+                                <li>Save URLs and usernames</li>
+                                <li>Write down dates and times</li>
+                                <li>Don't delete anything yet</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">📢 Report It</h4>
+                            <ul>
+                                <li>Use the platform's reporting tools</li>
+                                <li>Tell a trusted adult (parent, teacher, counselor)</li>
+                                <li>Contact school if it involves classmates</li>
+                                <li>Call police if there are threats of violence</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.9); color: #333; padding: 1.5rem; border-radius: 10px;">
+                            <h4 style="color: #667eea; margin-bottom: 1rem;">🤗 Get Support</h4>
+                            <ul>
+                                <li>Talk to friends and family</li>
+                                <li>Reach out to a counselor</li>
+                                <li>Call a helpline (numbers below)</li>
+                                <li>Join a support group</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Platform-Specific Reporting:</h4>
+                        <ul>
+                            <li><strong>Instagram/Facebook:</strong> Tap the three dots → Report</li>
+                            <li><strong>TikTok:</strong> Long press the comment → Report</li>
+                            <li><strong>Snapchat:</strong> Press and hold the snap → Report</li>
+                            <li><strong>Discord:</strong> Right-click message → Report</li>
+                            <li><strong>Twitter/X:</strong> Click three dots → Report Tweet</li>
+                            <li><strong>YouTube:</strong> Click three dots → Report</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🛡️ Staying Safe Online</h2>
+                    <h3>Lock Down Your Privacy</h3>
+                    <ul>
+                        <li>Make your social media accounts private</li>
+                        <li>Turn off location sharing</li>
+                        <li>Review your friends and followers regularly</li>
+                        <li>Think before you post - would you be okay if your grandma saw this?</li>
+                        <li>Don't share personal information like your address or phone number</li>
+                    </ul>
+
+                    <h3>Being a Good Digital Citizen</h3>
+                    <ul>
+                        <li>Treat others the way you want to be treated online</li>
+                        <li>Think before you comment or share</li>
+                        <li>Stand up for others who are being bullied (safely)</li>
+                        <li>Report content that seems harmful or illegal</li>
+                        <li>Remember: there are real people behind usernames</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>💪 Remember You're Stronger Than You Think</h2>
+                    <div class="success-box">
+                        <p>Cyberbullying is tough, but you're tougher. You have the power to:</p>
+                        <ul>
+                            <li>Control your digital spaces</li>
+                            <li>Choose who gets access to you</li>
+                            <li>Build supportive relationships</li>
+                            <li>Stand up for yourself and others</li>
+                            <li>Get help when you need it</li>
+                        </ul>
+                    </div>
+
+                    <div class="emergency-box">
+                        <h3>🆘 Need Help Right Now?</h3>
+                        <ul>
+                            <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
+                            <li><strong>Kids Help Phone:</strong> 1-800-668-6868</li>
+                            <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566</li>
+                            <li><strong>Emergency:</strong> Call 911</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            
+            <!-- Footer for Teens Page -->
+            <footer class="footer">
+                <div class="container">
+                    <p><strong>Developed by the Kenyan Community in British Columbia</strong></p>
+                    <p>With funding from the Government of Canada</p>
+                </div>
+            </footer>
         </div>
 
         <!-- Cards Page -->
         <div id="cards" class="page">
-            <div class="page-content">
-                <div class="container">
-                    <div class="content-header">
-                        <h1>🎴 Cyber Chat Cards</h1>
-                        <p>A conversation deck to help families start supportive, non-judgmental conversations about cyberbullying</p>
+            <div class="container">
+                <div class="content-header">
+                    <h1>🎴 Cyber Chat Cards</h1>
+                    <p>A conversation deck to help families start supportive conversations about cyberbullying</p>
+                </div>
+
+                <div class="section">
+                    <h2>🎯 How to Play</h2>
+                    <p>Use the cards during relaxed moments like dinner, car rides, or family time. Take turns drawing and discussing cards.</p>
+                </div>
+
+                <div class="section">
+                    <h2>🎮 Interactive Conversation Cards</h2>
+                    <p>Choose a category below, or draw from the mixed deck for variety!</p>
+                    
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <button onclick="drawCard('mixed')" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 1.5rem 3rem; border-radius: 50px; font-size: 1.2rem; cursor: pointer; margin: 0.5rem;">
+                            🎴 Draw Mixed Card
+                        </button>
                     </div>
 
-                    <div class="section">
-                        <h2>🎯 How to Play</h2>
-                        <div class="info-box">
-                            <ul>
-                                <li>Use the cards during relaxed moments like dinner, car rides, or family time</li>
-                                <li>Take turns drawing and discussing cards</li>
-                                <li>Encourage honesty, active listening, and no judgment</li>
-                                <li>Alternate who asks and who answers the questions</li>
-                                <li>Create a safe space for open conversation</li>
-                            </ul>
+                    <div id="cardDisplay" style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 2rem 0; min-height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 1.1rem; display: none;">
+                        <div id="cardContent">Click any button above to draw a conversation card!</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>📝 Choose Your Card Category</h2>
+                    <p>Click on any category below to draw cards from that specific topic:</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                        <div class="card-category scenario" onclick="drawCard('scenario')">
+                            <h4 style="color: #1976d2;">🤔 Scenario Cards</h4>
+                            <p>Real-world cyberbullying situations to discuss and problem-solve together</p>
+                            <div class="draw-button">Click to Draw</div>
                         </div>
-                    </div>
-
-                    <!-- Interactive Card Game -->
-                    <div class="section">
-                        <h2>🎮 Interactive Card Game</h2>
-                        <div class="card-game-container">
-                            <!-- Game Controls -->
-                            <div class="game-controls">
-                                <div class="deck-info">
-                                    <div class="deck-stats">
-                                        <span id="cardsRemaining">40</span> cards remaining
-                                    </div>
-                                    <div class="category-filters">
-                                        <button class="filter-btn active" data-category="all">All Cards</button>
-                                        <button class="filter-btn" data-category="scenario">Scenarios (15)</button>
-                                        <button class="filter-btn" data-category="response">Responses (10)</button>
-                                        <button class="filter-btn" data-category="question">Questions (10)</button>
-                                        <button class="filter-btn" data-category="fact">Facts (5)</button>
-                                    </div>
-                                </div>
-                                <div class="action-buttons">
-                                    <button id="drawCard" class="btn btn-primary">Draw Card</button>
-                                    <button id="shuffleDeck" class="btn btn-secondary">Shuffle Deck</button>
-                                    <button id="resetDeck" class="btn" style="background: #f39c12; color: white;">Reset Deck</button>
-                                </div>
-                            </div>
-
-                            <!-- Card Display Area -->
-                            <div class="card-display-area">
-                                <div id="currentCard" class="game-card hidden">
-                                    <div class="card-header">
-                                        <span class="card-category"></span>
-                                        <span class="card-number"></span>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="card-main-text"></div>
-                                        <div class="card-questions">
-                                            <div class="card-question child-asks">
-                                                <strong>Child asks Parent:</strong>
-                                                <span class="question-text"></span>
-                                            </div>
-                                            <div class="card-question parent-asks">
-                                                <strong>Parent asks Child:</strong>
-                                                <span class="question-text"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div id="deckPlaceholder" class="deck-placeholder">
-                                    <div class="deck-visual">
-                                        <div class="deck-card deck-card-1"></div>
-                                        <div class="deck-card deck-card-2"></div>
-                                        <div class="deck-card deck-card-3"></div>
-                                    </div>
-                                    <p>Click "Draw Card" to start playing!</p>
-                                </div>
-                            </div>
-
-                            <!-- Game History -->
-                            <div class="game-history">
-                                <h3>Recently Drawn Cards</h3>
-                                <div id="cardHistory" class="card-history-list">
-                                    <p class="no-history">No cards drawn yet. Start the conversation!</p>
-                                </div>
-                            </div>
+                        <div class="card-category feeling" onclick="drawCard('feeling')">
+                            <h4 style="color: #7b1fa2;">💭 Feeling Cards</h4>
+                            <p>Questions about emotions, reactions, and mental health during online challenges</p>
+                            <div class="draw-button">Click to Draw</div>
                         </div>
-                    </div>
-
-                    <div class="section">
-                        <h2>💡 Tips for Great Conversations</h2>
-                        <div class="action-grid">
-                            <div class="action-card">
-                                <h4>🕐 Choose the Right Time</h4>
-                                <p>Pick moments when everyone is relaxed and not distracted by devices or stress.</p>
-                            </div>
-                            <div class="action-card">
-                                <h4>👂 Listen Actively</h4>
-                                <p>Give your full attention and avoid interrupting or immediately offering solutions.</p>
-                            </div>
-                            <div class="action-card">
-                                <h4>🚫 No Judgment Zone</h4>
-                                <p>Create a safe space where everyone can share honestly without fear of criticism.</p>
-                            </div>
-                            <div class="action-card">
-                                <h4>🎯 Stay Curious</h4>
-                                <p>Ask follow-up questions and show genuine interest in understanding each other's perspectives.</p>
-                            </div>
+                        <div class="card-category safety" onclick="drawCard('safety')">
+                            <h4 style="color: #388e3c;">🛡️ Safety Cards</h4>
+                            <p>Privacy settings, reporting mechanisms, and protective strategies</p>
+                            <div class="draw-button">Click to Draw</div>
+                        </div>
+                        <div class="card-category family" onclick="drawCard('family')">
+                            <h4 style="color: #f57c00;">👨‍👩‍👧‍👦 Family Cards</h4>
+                            <p>Questions about family values, communication, and support systems</p>
+                            <div class="draw-button">Click to Draw</div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Footer for Cards Page -->
+            <footer class="footer">
+                <div class="container">
+                    <p><strong>Developed by the Kenyan Community in British Columbia</strong></p>
+                    <p>With funding from the Government of Canada</p>
+                </div>
+            </footer>
         </div>
 
         <!-- Resources Page -->
         <div id="resources" class="page">
-            <div class="page-content">
-                <div class="container">
-                    <div class="content-header">
-                        <h1>📞 Emergency Resources & Support</h1>
-                        <p>Help is available 24/7 - you don't have to face this alone</p>
+            <div class="container">
+                <div class="content-header">
+                    <h1>📞 Emergency Resources & Support</h1>
+                    <p>Help is available 24/7 - you don't have to face this alone</p>
+                </div>
+
+                <div class="emergency-box">
+                    <h3>🚨 Immediate Crisis Support</h3>
+                    <p><strong>If you or someone you know is in immediate danger or mentions self-harm:</strong></p>
+                    <ul>
+                        <li><strong>Emergency:</strong> Call 911</li>
+                        <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
+                        <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566 (24/7)</li>
+                        <li><strong>Kids Help Phone:</strong> 1-800-668-6868 (24/7)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>🇨🇦 Canadian Support Organizations</h2>
+                    
+                    <h3>Kids Help Phone</h3>
+                    <div class="info-box">
+                        <p><strong>Phone:</strong> 1-800-668-6868</p>
+                        <p><strong>Text:</strong> Text CONNECT to 686868</p>
+                        <p><strong>Website:</strong> kidshelpphone.ca</p>
+                        <p>24/7 counseling and information service for young people across Canada. Confidential support via phone, text, and live chat.</p>
                     </div>
-
-                    <div class="emergency-box">
-                        <h3>🚨 Immediate Crisis Support</h3>
-                        <p><strong>If you or someone you know is in immediate danger or mentions self-harm:</strong></p>
-                        <ul>
-                            <li><strong>Emergency:</strong> Call 911</li>
-                            <li><strong>Crisis Text Line:</strong> Text HOME to 686868</li>
-                            <li><strong>Talk Suicide Canada:</strong> 1-833-456-4566 (24/7)</li>
-                            <li><strong>Kids Help Phone:</strong> 1-800-668-6868 (24/7)</li>
-                        </ul>
+                    
+                    <h3>BullyingCanada.ca</h3>
+                    <div class="info-box">
+                        <p><strong>Phone:</strong> 1-877-352-4497</p>
+                        <p><strong>Website:</strong> bullyingcanada.ca</p>
+                        <p>Canadian anti-bullying organization providing live chat support, resources, and advocacy for victims of bullying and cyberbullying.</p>
                     </div>
-
-                    <div class="section">
-                        <h2>🇨🇦 Canadian Support Organizations</h2>
-                        
-                        <h3>Kids Help Phone</h3>
-                        <div class="info-box">
-                            <p><strong>Phone:</strong> 1-800-668-6868</p>
-                            <p><strong>Text:</strong> Text CONNECT to 686868</p>
-                            <p><strong>Website:</strong> kidshelpphone.ca</p>
-                            <p>24/7 counseling and information service for young people across Canada. Confidential support via phone, text, and live chat.</p>
-                        </div>
-                        
-                        <h3>BullyingCanada.ca</h3>
-                        <div class="info-box">
-                            <p><strong>Phone:</strong> 1-877-352-4497</p>
-                            <p><strong>Website:</strong> bullyingcanada.ca</p>
-                            <p>Canadian anti-bullying organization providing live chat support, resources, and advocacy for victims of bullying and cyberbullying.</p>
-                        </div>
-                        
-                        <h3>RCMP Cyberbullying Resources</h3>
-                        <div class="info-box">
-                            <p><strong>Website:</strong> rcmp-grc.gc.ca</p>
-                            <p>Information on reporting cybercrimes and cyberbullying. Contact for situations involving threats, criminal harassment, or image-based abuse.</p>
-                        </div>
+                    
+                    <h3>RCMP Cyberbullying Resources</h3>
+                    <div class="info-box">
+                        <p><strong>Website:</strong> rcmp-grc.gc.ca</p>
+                        <p>Information on reporting cybercrimes and cyberbullying. Contact for situations involving threats, criminal harassment, or image-based abuse.</p>
                     </div>
+                    
+                    <h3>PREVNet</h3>
+                    <div class="info-box">
+                        <p><strong>Website:</strong> prevnet.ca</p>
+                        <p>Canada's authority on bullying prevention research. Provides evidence-based resources, research, and tools for families and educators.</p>
+                    </div>
+                </div>
 
-                    <div class="section">
-                        <h2>💻 Platform Reporting Resources</h2>
-                        <h3>Social Media Platforms</h3>
-                        <ul>
-                            <li><strong>Facebook/Instagram:</strong> facebook.com/help - Report bullying, harassment</li>
-                            <li><strong>TikTok:</strong> support.tiktok.com - Safety and reporting center</li>
-                            <li><strong>Snapchat:</strong> support.snapchat.com - Report harmful content</li>
-                            <li><strong>Discord:</strong> discord.com/safety - Trust & Safety reporting</li>
-                            <li><strong>Twitter/X:</strong> help.twitter.com - Report abusive behavior</li>
-                        </ul>
+                <div class="section">
+                    <h2>🏫 School and Community Support</h2>
+                    <ul>
+                        <li><strong>School counselors</strong> and social workers</li>
+                        <li><strong>Anti-bullying coordinators</strong> at your teen's school</li>
+                        <li><strong>Mental health professionals</strong> in your community</li>
+                        <li><strong>Family doctors</strong> who can provide referrals and support</li>
+                        <li><strong>Community centers</strong> offering youth programs</li>
+                        <li><strong>Local police</strong> for serious threats or criminal behavior</li>
+                    </ul>
 
-                        <h3>Gaming Platforms</h3>
+                    <div class="info-box">
+                        <h4>When to Seek Professional Help</h4>
+                        <p>Consider professional mental health support if you or your teenager shows:</p>
                         <ul>
-                            <li><strong>PlayStation:</strong> playstation.com/safety - Online safety center</li>
-                            <li><strong>Xbox:</strong> xbox.com/safety - Report player behavior</li>
-                            <li><strong>Steam:</strong> help.steampowered.com - Report harassment</li>
-                            <li><strong>Roblox:</strong> roblox.com/safety - Safety and civility resources</li>
+                            <li>Persistent depression or anxiety</li>
+                            <li>Significant changes in behavior or personality</li>
+                            <li>Declining academic performance</li>
+                            <li>Social withdrawal or isolation</li>
+                            <li>Sleep or appetite disturbances</li>
+                            <li>Expressions of hopelessness or self-harm</li>
                         </ul>
                     </div>
                 </div>
+
+                <div class="section">
+                    <h2>💻 Platform Reporting Resources</h2>
+                    <h3>Social Media Platforms</h3>
+                    <ul>
+                        <li><strong>Facebook/Instagram:</strong> facebook.com/help - Report bullying, harassment</li>
+                        <li><strong>TikTok:</strong> support.tiktok.com - Safety and reporting center</li>
+                        <li><strong>Snapchat:</strong> support.snapchat.com - Report harmful content</li>
+                        <li><strong>Discord:</strong> discord.com/safety - Trust & Safety reporting</li>
+                        <li><strong>Twitter/X:</strong> help.twitter.com - Report abusive behavior</li>
+                    </ul>
+
+                    <h3>Gaming Platforms</h3>
+                    <ul>
+                        <li><strong>PlayStation:</strong> playstation.com/safety - Online safety center</li>
+                        <li><strong>Xbox:</strong> xbox.com/safety - Report player behavior</li>
+                        <li><strong>Steam:</strong> help.steampowered.com - Report harassment</li>
+                        <li><strong>Roblox:</strong> roblox.com/safety - Safety and civility resources</li>
+                    </ul>
+                </div>
             </div>
+            
+            <!-- Footer for Resources Page -->
+            <footer class="footer">
+                <div class="container">
+                    <p><strong>Developed by the Kenyan Community in British Columbia</strong></p>
+                    <p>With funding from the Government of Canada</p>
+                </div>
+            </footer>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p><strong>Developed by the Kenyan Community in British Columbia</strong></p>
-            <p>With funding from the Government of Canada</p>
-            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
-                This website provides general information and should not replace professional advice. 
-                In emergencies, always call 911.
-            </p>
+    <!-- Salama Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbotToggle" title="Chat with Salama">
+            <span style="font-size: 20px;">💬</span>
+            <span style="font-size: 12px; font-weight: bold;">Chat with Salama</span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div>🤖 Salama - Your Support Assistant</div>
+                <div style="font-size: 0.8em; opacity: 0.9;">Here to help with cyberbullying questions</div>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot">
+                    Hi! I'm Salama, your cyberbullying support assistant. I'm here to help answer questions and provide guidance. How can I support you today?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." maxlength="200">
+                <button id="chatbotSend">Send</button>
+            </div>
         </div>
-    </footer>
+    </div>
 
     <!-- JavaScript -->
     <script>
-        // Card Game Data
-        const cardData = {
+        console.log('🚀 Website starting...');
+
+        // Conversation cards organized by category
+        const conversationCards = {
             scenario: [
-                { text: "Your friend starts posting mean comments about your photos.", childAsk: "How would you feel if this happened to you?", parentAsk: "What would you want me to do if someone did this to you?" },
-                { text: "Someone creates a fake account pretending to be you.", childAsk: "How do you think this would affect someone's reputation?", parentAsk: "What steps would you take if this happened to you?" },
-                { text: "You see classmates excluding someone from group chats.", childAsk: "Have you ever been left out of something? How did it feel?", parentAsk: "What would you do if you saw this happening?" },
-                { text: "Someone shares your private messages without permission.", childAsk: "What would you do if someone broke your trust like this?", parentAsk: "How would you handle this situation?" },
-                { text: "A person keeps sending you mean messages even after you asked them to stop.", childAsk: "What advice would you give someone in this situation?", parentAsk: "What would be your first step to help solve this?" },
-                { text: "Someone spreads a rumor about you online that isn't true.", childAsk: "How do you think false rumors can hurt someone?", parentAsk: "How would you help me handle false information about me?" },
-                { text: "You get added to a group chat where people are making fun of others.", childAsk: "What would you do in this situation?", parentAsk: "What would you want me to do if this happened to me?" },
-                { text: "Someone posts embarrassing photos of you without asking.", childAsk: "How serious do you think this kind of situation is?", parentAsk: "What would be the most important thing to do first?" },
-                { text: "People are using mean names to talk about you in online comments.", childAsk: "How do you think this would affect someone's day?", parentAsk: "What could we do together to address this?" },
-                { text: "Someone threatens to share your secrets online unless you do what they want.", childAsk: "What makes this different from other types of bullying?", parentAsk: "How would you want me to support you in this situation?" },
-                { text: "Your gaming teammates start targeting and harassing you during games.", childAsk: "Why do you think people act differently online than in person?", parentAsk: "What would you do if online gaming stopped being fun because of this?" },
-                { text: "Someone takes a screenshot of your private conversation and shares it publicly.", childAsk: "How would this make you feel about sharing personal things online?", parentAsk: "What would you want to happen to the person who did this?" },
-                { text: "People create a group specifically to talk about you in mean ways.", childAsk: "What do you think motivates people to do something like this?", parentAsk: "How would you help me feel better if this happened to me?" },
-                { text: "Someone uses information from your social media to embarrass you at school.", childAsk: "What does this teach us about what we share online?", parentAsk: "How would you help me think through my privacy settings?" },
-                { text: "You find out people have been making fun of your appearance in a group chat.", childAsk: "What would you want a friend to do if they saw this happening?", parentAsk: "How would you help me feel confident again after something like this?" }
+                "🤔 Your friend shows you a mean meme about a classmate. What would you do?",
+                "🤔 Someone creates a fake social media account pretending to be you. How do you handle this?",
+                "🤔 You see someone being excluded from a group chat on purpose. What's your response?",
+                "🤔 A stranger online asks for your personal information. What do you say?",
+                "🤔 Someone screenshots your private message and shares it publicly. What's your next step?",
+                "🤔 You witness someone sharing embarrassing photos of a classmate without permission. What do you do?",
+                "🤔 A group of people start commenting mean things on everything you post. How do you respond?",
+                "🤔 Someone you thought was your friend starts spreading rumors about you online. What would you do?"
             ],
-            response: [
-                { text: "Take screenshots and save evidence of harmful messages.", childAsk: "Why do you think it's important to keep messages as proof?", parentAsk: "Do you know how to take a screenshot if you need to?" },
-                { text: "Talk to a trusted adult, like a teacher or counsellor.", childAsk: "Who was a trusted adult for you when you were my age?", parentAsk: "Who would you feel comfortable talking to if something bad happened online?" },
-                { text: "Block and report the person sending hurtful messages.", childAsk: "Have you ever had to block someone? What happened?", parentAsk: "Do you know how to report someone on the apps you use?" },
-                { text: "Don't reply to mean messages.", childAsk: "Why is ignoring a bully sometimes the best option?", parentAsk: "How do you usually feel when someone says something mean online?" },
-                { text: "Share your feelings with someone you trust.", childAsk: "Who do you talk to when you're feeling upset?", parentAsk: "What helps you feel better when something online bothers you?" },
-                { text: "Use privacy settings to protect your account.", childAsk: "What kind of privacy settings do you use online?", parentAsk: "Have we checked your privacy settings together recently?" },
-                { text: "Think before you post.", childAsk: "Have you ever posted something you regretted?", parentAsk: "What do you think about before sharing something online?" },
-                { text: "Ask for help if things feel overwhelming.", childAsk: "What do you do when you're feeling overwhelmed?", parentAsk: "How can I support you when things online get tough?" },
-                { text: "Stand up for others if it feels safe to do so.", childAsk: "Have you ever stood up for someone being bullied?", parentAsk: "What would make you feel safe speaking up for someone?" },
-                { text: "Take a break from technology.", childAsk: "When was the last time you took a break from screens?", parentAsk: "What do you like to do when you're offline?" }
+            feeling: [
+                "💭 How do you feel when you see someone being mean to others online?",
+                "💭 What emotions come up when someone doesn't respond to your messages?",
+                "💭 How would you feel if your private photos were shared without permission?",
+                "💭 Describe a time when something online made you feel really good about yourself.",
+                "💭 What would you do if online drama was affecting your sleep or appetite?",
+                "💭 How do you feel when you see others getting more likes or followers than you?",
+                "💭 What emotions do you experience when someone unfriends or blocks you?",
+                "💭 How would you support a friend who's feeling hurt by something that happened online?"
             ],
-            question: [
-                { text: "What makes you feel safe online?", childAsk: "What rules helped you feel safe when you were younger?", parentAsk: "What helps you feel safe when you're using the internet?" },
-                { text: "What should we do if we see someone being bullied online?", childAsk: "How do you think we can help without making things worse?", parentAsk: "What would you do if your friend was being cyberbullied?" },
-                { text: "How can we tell if someone is being bullied online?", childAsk: "What signs would you look for?", parentAsk: "What would you notice in a friend who might be going through this?" },
-                { text: "What should we post online?", childAsk: "How do you decide what's okay to share?", parentAsk: "What kind of posts do you think are respectful?" },
-                { text: "Who are your online friends?", childAsk: "Did you ever have pen pals or distant friends when you were my age?", parentAsk: "How do you choose who to add or follow online?" },
-                { text: "Have you ever felt left out online?", childAsk: "What was it like for you when you felt left out?", parentAsk: "How do you feel when others leave you out in chats or posts?" },
-                { text: "Why do people cyberbully others?", childAsk: "What do you think causes someone to be a bully?", parentAsk: "Why do you think some people act mean online?" },
-                { text: "What helps when you're upset by something online?", childAsk: "What do you do when something online bothers you?", parentAsk: "What helps you feel better after a bad online experience?" },
-                { text: "How can we support friends who are cyberbullied?", childAsk: "What would you say to a friend who was hurting?", parentAsk: "What could you do to help a friend who's being bullied online?" },
-                { text: "When should we ask for help?", childAsk: "How do you know it's time to get help from someone else?", parentAsk: "Would you feel okay coming to me if something happened online?" }
+            safety: [
+                "🛡️ What privacy settings do you think are most important on social media?",
+                "🛡️ How do you decide who to accept as friends or followers online?",
+                "🛡️ What information should you never share online, even with friends?",
+                "🛡️ When would you block or report someone online?",
+                "🛡️ How can you tell if a website or app is safe to use?",
+                "🛡️ What should you do before posting a photo or video online?",
+                "🛡️ How do you keep your passwords safe and secure?",
+                "🛡️ What would you do if someone asked you to meet them in person after talking online?"
             ],
-            fact: [
-                { text: "1 in 3 youth in Canada experience cyberbullying. – PREVNet", childAsk: "Does that number surprise you?", parentAsk: "Why do you think this is happening so often?" },
-                { text: "Cyberbullying can lead to anxiety, depression, and poor school performance.", childAsk: "What can parents do to help if they see these signs?", parentAsk: "How can we work together to take care of your mental health?" },
-                { text: "Girls are more likely than boys to report being cyberbullied.", childAsk: "Why do you think this happens?", parentAsk: "Do you think people talk enough about how bullying affects different groups?" },
-                { text: "Cyberbullying often overlaps with in-person bullying.", childAsk: "What should we do if bullying happens both online and at school?", parentAsk: "Have you seen bullying happen in both places?" },
-                { text: "Using positive parenting and being a good role model helps reduce cyberbullying.", childAsk: "What does being a positive role model mean to you?", parentAsk: "How do you think I can be a better support for you online?" }
-            ]
+            family: [
+                "👨‍👩‍👧‍👦 What would make it easier for you to talk to parents about online problems?",
+                "👨‍👩‍👧‍👦 How can our family support each other when dealing with online challenges?",
+                "👨‍👩‍👧‍👦 What family rules should we have about internet and device use?",
+                "👨‍👩‍👧‍👦 If you saw cyberbullying happening, when would you tell a parent or teacher?",
+                "👨‍👩‍👧‍👦 What's the most important thing you want your parents to understand about your online life?",
+                "👨‍👩‍👧‍👦 How should our family handle disagreements about screen time or online activities?",
+                "👨‍👩‍👧‍👦 What online activities do you think our family could enjoy together?",
+                "👨‍👩‍👧‍👦 How can parents stay involved in their teen's online life without being invasive?"
+            ],
+            mixed: []
         };
 
-        // Game State
-        let currentDeck = [];
-        let drawnCards = [];
-        let cardHistory = [];
-        let currentFilter = 'all';
+        // Combine all cards for mixed category
+        conversationCards.mixed = [
+            ...conversationCards.scenario,
+            ...conversationCards.feeling,
+            ...conversationCards.safety,
+            ...conversationCards.family
+        ];
 
-        // Navigation Function - FIXED
+        let currentCategory = 'mixed';
+
+        // Draw card function with extensive debugging
+        function drawCard(category = null) {
+            console.log('🎴 drawCard called with category:', category);
+            
+            if (category) {
+                currentCategory = category;
+                console.log('📂 Current category set to:', currentCategory);
+            }
+            
+            const cards = conversationCards[currentCategory];
+            console.log('🃏 Available cards:', cards);
+            
+            if (!cards || cards.length === 0) {
+                console.error('❌ No cards found for category:', currentCategory);
+                alert('Error: No cards found for category: ' + currentCategory);
+                return;
+            }
+            
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            console.log('🎯 Random card selected:', randomCard);
+            
+            const cardDisplay = document.getElementById('cardDisplay');
+            const cardContent = document.getElementById('cardContent');
+            
+            if (!cardDisplay || !cardContent) {
+                console.error('❌ Card display elements not found');
+                alert('Error: Card display elements not found');
+                return;
+            }
+            
+            // Show which category is active
+            const categoryNames = {
+                scenario: '🤔 Scenario Card',
+                feeling: '💭 Feeling Card', 
+                safety: '🛡️ Safety Card',
+                family: '👨‍👩‍👧‍👦 Family Card',
+                mixed: '🎴 Mixed Card'
+            };
+            
+            cardContent.innerHTML = `
+                <div style="text-align: center;">
+                    <div style="background: rgba(102, 126, 234, 0.1); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; color: #667eea; font-weight: bold;">
+                        ${categoryNames[currentCategory]}
+                    </div>
+                    <div style="font-size: 1.3rem; line-height: 1.6;">${randomCard}</div>
+                </div>
+            `;
+            cardDisplay.style.display = 'flex';
+            
+            // Add some animation
+            cardDisplay.style.opacity = '0';
+            setTimeout(() => {
+                cardDisplay.style.opacity = '1';
+                cardDisplay.style.transition = 'opacity 0.5s ease-in-out';
+            }, 100);
+            
+            console.log('✅ Card displayed successfully');
+        }
+
+        // Simple navigation function
         function showPage(pageId) {
-            console.log('Switching to page:', pageId);
+            console.log('📄 Showing page:', pageId);
             
             // Hide all pages
             const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
+            for (let i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('active');
+                pages[i].style.display = 'none';
+            }
             
-            // Show selected page
+            // Show target page
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.add('active');
-                console.log('Successfully showing page:', pageId);
+                targetPage.style.display = 'block';
+                console.log('✅ Page shown:', pageId);
             } else {
-                console.error('Page not found:', pageId);
+                console.error('❌ Page not found:', pageId);
             }
             
-            // Close mobile menu if open
+            // Close mobile menu
             const navMenu = document.getElementById('navMenu');
             if (navMenu) {
                 navMenu.classList.remove('active');
             }
             
             // Scroll to top
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            return false;
         }
 
-        // Initialize the game
-        function initializeGame() {
-            buildDeck();
-            shuffleDeck();
-            updateUI();
-            setupEventListeners();
-        }
-
-        function buildDeck() {
-            currentDeck = [];
-            let cardId = 1;
-            
-            for (const [category, cards] of Object.entries(cardData)) {
-                if (currentFilter === 'all' || currentFilter === category) {
-                    cards.forEach((card, index) => {
-                        currentDeck.push({
-                            id: cardId++,
-                            category: category,
-                            number: index + 1,
-                            ...card
-                        });
-                    });
-                }
-            }
-        }
-
-        function shuffleDeck() {
-            // Fisher-Yates shuffle
-            for (let i = currentDeck.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [currentDeck[i], currentDeck[j]] = [currentDeck[j], currentDeck[i]];
-            }
-            updateUI();
-        }
-
-        function drawCard() {
-            if (currentDeck.length === 0) {
-                alert('No more cards in the deck! Click "Reset Deck" to start over.');
-                return;
-            }
-
-            const card = currentDeck.pop();
-            drawnCards.push(card);
-            
-            // Add to history
-            cardHistory.unshift(card);
-            if (cardHistory.length > 5) {
-                cardHistory.pop();
-            }
-
-            displayCard(card);
-            updateUI();
-        }
-
-        function displayCard(card) {
-            const cardElement = document.getElementById('currentCard');
-            const placeholder = document.getElementById('deckPlaceholder');
-            
-            // Hide placeholder and show card
-            placeholder.style.display = 'none';
-            
-            // Update card content
-            cardElement.querySelector('.card-category').textContent = card.category;
-            cardElement.querySelector('.card-category').className = `card-category ${card.category}`;
-            cardElement.querySelector('.card-number').textContent = `Card ${card.number}`;
-            cardElement.querySelector('.card-main-text').textContent = card.text;
-            
-            const childQuestion = cardElement.querySelector('.child-asks .question-text');
-            const parentQuestion = cardElement.querySelector('.parent-asks .question-text');
-            childQuestion.textContent = card.childAsk;
-            parentQuestion.textContent = card.parentAsk;
-            
-            // Show card
-            cardElement.classList.remove('hidden');
-            cardElement.classList.add('showing');
-        }
-
-        function resetDeck() {
-            drawnCards = [];
-            cardHistory = [];
-            buildDeck();
-            shuffleDeck();
-            
-            // Hide current card and show placeholder
-            const cardElement = document.getElementById('currentCard');
-            const placeholder = document.getElementById('deckPlaceholder');
-            
-            cardElement.classList.remove('showing');
-            cardElement.classList.add('hidden');
-            placeholder.style.display = 'block';
-            
-            updateUI();
-        }
-
-        function setFilter(category) {
-            currentFilter = category;
-            
-            // Update filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.category === category);
-            });
-            
-            resetDeck();
-        }
-
-        function updateUI() {
-            // Update cards remaining
-            document.getElementById('cardsRemaining').textContent = currentDeck.length;
-            
-            // Update card history
-            const historyContainer = document.getElementById('cardHistory');
-            if (cardHistory.length === 0) {
-                historyContainer.innerHTML = '<p class="no-history">No cards drawn yet. Start the conversation!</p>';
-            } else {
-                historyContainer.innerHTML = cardHistory.map(card => `
-                    <div class="history-item">
-                        <span class="history-category">${card.category}</span>
-                        <div style="font-weight: bold; margin: 0.5rem 0;">${card.text}</div>
-                    </div>
-                `).join('');
-            }
-        }
-
-        function setupEventListeners() {
-            // Game controls
-            const drawBtn = document.getElementById('drawCard');
-            const shuffleBtn = document.getElementById('shuffleDeck');
-            const resetBtn = document.getElementById('resetDeck');
-            
-            if (drawBtn) drawBtn.addEventListener('click', drawCard);
-            if (shuffleBtn) shuffleBtn.addEventListener('click', shuffleDeck);
-            if (resetBtn) resetBtn.addEventListener('click', resetDeck);
-            
-            // Filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    setFilter(e.target.dataset.category);
-                });
-            });
-        }
-
+        // Mobile menu toggle
         function toggleMobileMenu() {
+            console.log('📱 Toggling menu');
             const navMenu = document.getElementById('navMenu');
             if (navMenu) {
                 navMenu.classList.toggle('active');
             }
+            return false;
         }
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const navMenu = document.getElementById('navMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
+        // Chatbot functionality
+        function initChatbot() {
+            console.log('🤖 Initializing Salama...');
             
-            if (navMenu && toggle && !navMenu.contains(event.target) && !toggle.contains(event.target)) {
-                navMenu.classList.remove('active');
+            const toggle = document.getElementById('chatbotToggle');
+            const window = document.getElementById('chatbotWindow');
+            const input = document.getElementById('chatbotInput');
+            const send = document.getElementById('chatbotSend');
+            const messages = document.getElementById('chatbotMessages');
+            
+            if (toggle && window) {
+                toggle.onclick = function() {
+                    window.classList.toggle('active');
+                    console.log('💬 Chatbot toggled');
+                    if (window.classList.contains('active') && input) {
+                        input.focus();
+                    }
+                };
+                
+                function sendMessage() {
+                    const message = input.value.trim();
+                    if (message) {
+                        addMessage(message, 'user');
+                        input.value = '';
+                        
+                        setTimeout(() => {
+                            const response = getBotResponse(message);
+                            addMessage(response, 'bot');
+                        }, 1000);
+                    }
+                }
+                
+                function addMessage(text, sender) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `chatbot-message ${sender}`;
+                    messageDiv.textContent = text;
+                    messages.appendChild(messageDiv);
+                    messages.scrollTop = messages.scrollHeight;
+                }
+                
+                function getBotResponse(message) {
+                    const msg = message.toLowerCase();
+                    if (msg.includes('help') || msg.includes('emergency')) {
+                        return "🚨 If you're in immediate danger, call 911. For support: Kids Help Phone 1-800-668-6868, Crisis Text Line: text HOME to 686868.";
+                    } else if (msg.includes('cyberbully') || msg.includes('bullying')) {
+                        return "💪 Remember: it's not your fault, document everything, report it, and tell a trusted adult.";
+                    } else if (msg.includes('parent') || msg.includes('talk')) {
+                        return "👨‍👩‍👧‍👦 Talking to parents can feel scary, but they want to help. Try saying: 'I need to tell you something important happening online.'";
+                    } else if (msg.includes('report')) {
+                        return "📱 To report: 1) Take screenshots, 2) Use platform reporting tools, 3) Tell a trusted adult, 4) Contact school if needed.";
+                    } else if (msg.includes('scared') || msg.includes('afraid')) {
+                        return "🤗 It's normal to feel scared. You're brave for reaching out! Remember: you're not alone and this isn't your fault.";
+                    } else if (msg.includes('hi') || msg.includes('hello')) {
+                        return "👋 Hi there! I'm Salama, here to help with cyberbullying questions. How can I support you today?";
+                    } else if (msg.includes('cards') || msg.includes('conversation')) {
+                        return "🎴 The Cyber Chat Cards are great for family conversations! Try drawing a card and discussing it together.";
+                    } else {
+                        return "💙 I'm here to help with cyberbullying support. You can explore our Parents, Teens, or Resources sections, or ask me specific questions!";
+                    }
+                }
+                
+                if (send) {
+                    send.onclick = sendMessage;
+                }
+                
+                if (input) {
+                    input.onkeypress = function(e) {
+                        if (e.key === 'Enter') {
+                            sendMessage();
+                        }
+                    };
+                }
+                
+                console.log('✅ Salama ready!');
             }
-        });
+        }
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Website loaded successfully');
+        // Initialize when page loads
+        window.onload = function() {
+            console.log('🌟 Page loaded!');
+            console.log('🎴 Conversation cards available:', conversationCards);
+            console.log('🔍 Testing functions...');
             
-            // Ensure home page is visible by default
+            // Test if the functions exist
+            if (typeof drawCard === 'function') {
+                console.log('✅ drawCard function is available');
+            } else {
+                console.error('❌ drawCard function not found');
+            }
+            
+            if (typeof testClick === 'function') {
+                console.log('✅ testClick function is available');
+            } else {
+                console.error('❌ testClick function not found');
+            }
+            
             showPage('home');
-            
-            // Initialize card game
-            initializeGame();
-        });
+            initChatbot();
+            console.log('✅ Everything initialized!');
+            console.log('👀 Look for Salama (💬) in bottom-right corner!');
+        };
     </script>
 </body>
 </html>
