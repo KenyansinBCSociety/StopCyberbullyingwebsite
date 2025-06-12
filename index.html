@@ -77,19 +77,6 @@
             cursor: pointer;
         }
 
-        /* Language Selector */
-        .language-selector {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid #e9ecef;
-            position: fixed;
-            top: 80px;
-            width: 100%;
-            z-index: 999;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
         /* Main Content */
         .main-content {
             margin-top: 80px;
@@ -338,113 +325,41 @@
             margin-top: 4rem;
         }
 
-        /* Chatbot */
-        .chatbot-container {
+        /* Clean Chatbot Styles */
+        .chatbot-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            z-index: 9999;
-        }
-
-        .chatbot-toggle {
+            z-index: 1000;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             border-radius: 25px;
-            width: 140px;
-            height: 60px;
-            font-size: 14px;
+            width: 160px;
+            height: 70px;
+            font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            text-align: center;
             gap: 8px;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
 
-        .chatbot-toggle:hover {
+        .chatbot-button:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
         }
 
-        .chatbot-window {
-            position: absolute;
-            bottom: 85px;
-            right: 0;
-            width: 350px;
-            height: 450px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            border: 2px solid #667eea;
+        .chatbot-emoji {
+            font-size: 24px;
         }
 
-        .chatbot-window.active {
-            display: flex;
-        }
-
-        .chatbot-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            text-align: center;
+        .chatbot-text {
+            font-size: 14px;
             font-weight: bold;
-        }
-
-        .chatbot-messages {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background: #f8f9fa;
-        }
-
-        .chatbot-message {
-            margin-bottom: 15px;
-            padding: 10px 15px;
-            border-radius: 15px;
-            max-width: 80%;
-        }
-
-        .chatbot-message.bot {
-            background: #e3f2fd;
-            margin-right: 20%;
-        }
-
-        .chatbot-message.user {
-            background: #667eea;
-            color: white;
-            margin-left: 20%;
-            text-align: right;
-        }
-
-        .chatbot-input {
-            display: flex;
-            padding: 15px;
-            border-top: 1px solid #eee;
-        }
-
-        .chatbot-input input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 25px;
-            outline: none;
-        }
-
-        .chatbot-input button {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 25px;
-            margin-left: 10px;
-            cursor: pointer;
         }
 
         /* Mobile responsive */
@@ -480,6 +395,12 @@
 
             .container {
                 padding: 0 1rem;
+            }
+
+            .chatbot-button {
+                width: 120px;
+                height: 50px;
+                font-size: 12px;
             }
         }
     </style>
@@ -802,7 +723,6 @@
                             <li>You're being excluded from group chats or online games</li>
                             <li>Someone is pretending to be you online</li>
                             <li>You're feeling anxious every time you check your phone</li>
-                            <li>You're avoiding social media or certain apps</li>
                         </ul>
                     </div>
 
@@ -1083,6 +1003,65 @@
                         <li><strong>Roblox:</strong> roblox.com/safety - Safety and civility resources</li>
                     </ul>
                 </div>
+
+                <div class="section">
+                    <h2>🏥 Mental Health Resources</h2>
+                    <h3>British Columbia Specific</h3>
+                    <div class="info-box">
+                        <p><strong>Mental Health Support Line:</strong> 310-6789 (no area code needed)</p>
+                        <p><strong>BC Crisis Centre:</strong> 1-800-784-2433</p>
+                        <p><strong>Foundry BC:</strong> foundrybc.ca - Youth mental health and substance use services</p>
+                        <p><strong>Vancouver Coastal Health:</strong> vch.ca - Mental health services and resources</p>
+                    </div>
+
+                    <h3>National Resources</h3>
+                    <div class="info-box">
+                        <p><strong>Canada Suicide Prevention Service:</strong> 1-833-456-4566</p>
+                        <p><strong>Mental Health Commission of Canada:</strong> mentalhealthcommission.ca</p>
+                        <p><strong>Centre for Addiction and Mental Health:</strong> camh.ca</p>
+                        <p><strong>Canadian Mental Health Association:</strong> cmha.ca</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>📚 Educational Resources</h2>
+                    <h3>For Families</h3>
+                    <ul>
+                        <li><strong>MediaSmarts:</strong> mediasmarts.ca - Digital and media literacy resources</li>
+                        <li><strong>GetCyberSafe:</strong> getcybersafe.gc.ca - Government of Canada cybersecurity</li>
+                        <li><strong>Common Sense Media:</strong> commonsensemedia.org - Reviews and guidance</li>
+                        <li><strong>Digital Citizenship Institute:</strong> digitalcitizenship.net - Online behavior education</li>
+                    </ul>
+
+                    <h3>For Educators</h3>
+                    <ul>
+                        <li><strong>CASEL:</strong> casel.org - Social emotional learning resources</li>
+                        <li><strong>Cyberbullying Research Center:</strong> cyberbullying.org - Research and resources</li>
+                        <li><strong>UNESCO:</strong> unesco.org - Global education resources on cyberbullying</li>
+                        <li><strong>Teaching Tolerance:</strong> tolerance.org - Anti-bias education</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>⚖️ Legal Resources</h2>
+                    <div class="info-box">
+                        <h4>When Cyberbullying Becomes a Legal Matter:</h4>
+                        <ul>
+                            <li><strong>Criminal harassment or threats</strong> - Contact local police</li>
+                            <li><strong>Non-consensual sharing of intimate images</strong> - Report to cybertip.ca</li>
+                            <li><strong>Identity theft or fraud</strong> - Contact Canadian Anti-Fraud Centre</li>
+                            <li><strong>Hate crimes</strong> - Report to local police and RCMP</li>
+                        </ul>
+                    </div>
+
+                    <h3>Legal Aid</h3>
+                    <div class="info-box">
+                        <p><strong>Legal Aid BC:</strong> legalaid.bc.ca</p>
+                        <p><strong>BC Human Rights Tribunal:</strong> bchrt.bc.ca</p>
+                        <p><strong>Office of the Privacy Commissioner:</strong> priv.gc.ca</p>
+                        <p>Free or low-cost legal advice for families dealing with serious cyberbullying cases.</p>
+                    </div>
+                </div>
             </div>
             
             <!-- Footer for Resources Page -->
@@ -1095,28 +1074,11 @@
         </div>
     </main>
 
-    <!-- Salama Chatbot -->
-    <div class="chatbot-container">
-        <button class="chatbot-toggle" id="chatbotToggle" title="Chat with Salama">
-            <span style="font-size: 20px;">💬</span>
-            <span style="font-size: 12px; font-weight: bold;">Chat with Salama</span>
-        </button>
-        <div class="chatbot-window" id="chatbotWindow">
-            <div class="chatbot-header">
-                <div>🤖 Salama - Your Support Assistant</div>
-                <div style="font-size: 0.8em; opacity: 0.9;">Here to help with cyberbullying questions</div>
-            </div>
-            <div class="chatbot-messages" id="chatbotMessages">
-                <div class="chatbot-message bot">
-                    Hi! I'm Salama, your cyberbullying support assistant. I'm here to help answer questions and provide guidance. How can I support you today?
-                </div>
-            </div>
-            <div class="chatbot-input">
-                <input type="text" id="chatbotInput" placeholder="Type your message..." maxlength="200">
-                <button id="chatbotSend">Send</button>
-            </div>
-        </div>
-    </div>
+    <!-- Clean Salama Chatbot -->
+    <button class="chatbot-button" onclick="openSalamaGPT()" title="Chat with Salama - Opens ChatGPT in new tab">
+        <span class="chatbot-emoji">💬</span>
+        <span class="chatbot-text">Chat with Salama</span>
+    </button>
 
     <!-- JavaScript -->
     <script>
@@ -1177,40 +1139,32 @@
 
         let currentCategory = 'mixed';
 
-        // Draw card function with extensive debugging
+        // Draw card function
         function drawCard(category = null) {
             console.log('🎴 drawCard called with category:', category);
             
             if (category) {
                 currentCategory = category;
-                console.log('📂 Current category set to:', currentCategory);
             }
             
             const cards = conversationCards[currentCategory];
-            console.log('🃏 Available cards:', cards);
-            
             if (!cards || cards.length === 0) {
                 console.error('❌ No cards found for category:', currentCategory);
-                alert('Error: No cards found for category: ' + currentCategory);
                 return;
             }
             
             const randomCard = cards[Math.floor(Math.random() * cards.length)];
-            console.log('🎯 Random card selected:', randomCard);
-            
             const cardDisplay = document.getElementById('cardDisplay');
             const cardContent = document.getElementById('cardContent');
             
             if (!cardDisplay || !cardContent) {
                 console.error('❌ Card display elements not found');
-                alert('Error: Card display elements not found');
                 return;
             }
             
-            // Show which category is active
             const categoryNames = {
                 scenario: '🤔 Scenario Card',
-                feeling: '💭 Feeling Card', 
+                feeling: '💭 Feeling Card',
                 safety: '🛡️ Safety Card',
                 family: '👨‍👩‍👧‍👦 Family Card',
                 mixed: '🎴 Mixed Card'
@@ -1226,7 +1180,7 @@
             `;
             cardDisplay.style.display = 'flex';
             
-            // Add some animation
+            // Add animation
             cardDisplay.style.opacity = '0';
             setTimeout(() => {
                 cardDisplay.style.opacity = '1';
@@ -1236,7 +1190,7 @@
             console.log('✅ Card displayed successfully');
         }
 
-        // Simple navigation function
+        // Navigation function
         function showPage(pageId) {
             console.log('📄 Showing page:', pageId);
             
@@ -1279,80 +1233,27 @@
             return false;
         }
 
-        // Chatbot functionality
-        function initChatbot() {
-            console.log('🤖 Initializing Salama...');
+        // Open Salama GPT function
+        function openSalamaGPT() {
+            console.log('🤖 Opening Salama GPT...');
+            const salamaUrl = 'https://chatgpt.com/g/g-683092be9da481919affff75e6f848d5-salama-cyberbullying-resources-support-companion';
             
-            const toggle = document.getElementById('chatbotToggle');
-            const window = document.getElementById('chatbotWindow');
-            const input = document.getElementById('chatbotInput');
-            const send = document.getElementById('chatbotSend');
-            const messages = document.getElementById('chatbotMessages');
-            
-            if (toggle && window) {
-                toggle.onclick = function() {
-                    window.classList.toggle('active');
-                    console.log('💬 Chatbot toggled');
-                    if (window.classList.contains('active') && input) {
-                        input.focus();
-                    }
-                };
+            try {
+                // Try to open in new tab
+                const newTab = window.open(salamaUrl, '_blank', 'noopener,noreferrer');
                 
-                function sendMessage() {
-                    const message = input.value.trim();
-                    if (message) {
-                        addMessage(message, 'user');
-                        input.value = '';
-                        
-                        setTimeout(() => {
-                            const response = getBotResponse(message);
-                            addMessage(response, 'bot');
-                        }, 1000);
-                    }
+                if (newTab) {
+                    console.log('✅ Salama GPT opened in new tab');
+                    newTab.focus(); // Focus on the new tab
+                } else {
+                    console.log('❌ Popup blocked, trying alternative method');
+                    // Fallback for popup blockers
+                    window.location.href = salamaUrl;
                 }
-                
-                function addMessage(text, sender) {
-                    const messageDiv = document.createElement('div');
-                    messageDiv.className = `chatbot-message ${sender}`;
-                    messageDiv.textContent = text;
-                    messages.appendChild(messageDiv);
-                    messages.scrollTop = messages.scrollHeight;
-                }
-                
-                function getBotResponse(message) {
-                    const msg = message.toLowerCase();
-                    if (msg.includes('help') || msg.includes('emergency')) {
-                        return "🚨 If you're in immediate danger, call 911. For support: Kids Help Phone 1-800-668-6868, Crisis Text Line: text HOME to 686868.";
-                    } else if (msg.includes('cyberbully') || msg.includes('bullying')) {
-                        return "💪 Remember: it's not your fault, document everything, report it, and tell a trusted adult.";
-                    } else if (msg.includes('parent') || msg.includes('talk')) {
-                        return "👨‍👩‍👧‍👦 Talking to parents can feel scary, but they want to help. Try saying: 'I need to tell you something important happening online.'";
-                    } else if (msg.includes('report')) {
-                        return "📱 To report: 1) Take screenshots, 2) Use platform reporting tools, 3) Tell a trusted adult, 4) Contact school if needed.";
-                    } else if (msg.includes('scared') || msg.includes('afraid')) {
-                        return "🤗 It's normal to feel scared. You're brave for reaching out! Remember: you're not alone and this isn't your fault.";
-                    } else if (msg.includes('hi') || msg.includes('hello')) {
-                        return "👋 Hi there! I'm Salama, here to help with cyberbullying questions. How can I support you today?";
-                    } else if (msg.includes('cards') || msg.includes('conversation')) {
-                        return "🎴 The Cyber Chat Cards are great for family conversations! Try drawing a card and discussing it together.";
-                    } else {
-                        return "💙 I'm here to help with cyberbullying support. You can explore our Parents, Teens, or Resources sections, or ask me specific questions!";
-                    }
-                }
-                
-                if (send) {
-                    send.onclick = sendMessage;
-                }
-                
-                if (input) {
-                    input.onkeypress = function(e) {
-                        if (e.key === 'Enter') {
-                            sendMessage();
-                        }
-                    };
-                }
-                
-                console.log('✅ Salama ready!');
+            } catch (error) {
+                console.error('❌ Error opening Salama:', error);
+                // Final fallback
+                window.location.href = salamaUrl;
             }
         }
 
@@ -1360,23 +1261,8 @@
         window.onload = function() {
             console.log('🌟 Page loaded!');
             console.log('🎴 Conversation cards available:', conversationCards);
-            console.log('🔍 Testing functions...');
-            
-            // Test if the functions exist
-            if (typeof drawCard === 'function') {
-                console.log('✅ drawCard function is available');
-            } else {
-                console.error('❌ drawCard function not found');
-            }
-            
-            if (typeof testClick === 'function') {
-                console.log('✅ testClick function is available');
-            } else {
-                console.error('❌ testClick function not found');
-            }
             
             showPage('home');
-            initChatbot();
             console.log('✅ Everything initialized!');
             console.log('👀 Look for Salama (💬) in bottom-right corner!');
         };
